@@ -7,3 +7,33 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
+const addEmployee = [];
+
+inquirer.prompt(
+    [
+        {
+            type: 'input',
+            message: 'Hello! What is your name?',
+            name: 'name',
+            
+        },
+
+        {
+            type: 'input',
+            message: 'What is your ID number?',
+            name: 'id'
+        },
+        {
+            type: 'input',
+            message: 'What is your email address?',
+            name: 'email'
+        },
+        {
+            type: 'list',
+            message: 'What is your current position?',
+            choices: ['Engineer', 'Manager', 'Intern'],
+            name: 'role'
+        },
+
+    ]
+)
